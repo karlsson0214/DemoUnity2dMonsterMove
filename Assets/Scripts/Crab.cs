@@ -24,6 +24,23 @@ public class Crab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+        // small chance of rotation
+        if (Random.Range(0, 100) < 10)
+        {
+            if (Random.Range(0, 2) == 0)
+            {
+                // turn left
+                rb.rotation += 5;
+            }
+            else
+            {
+                // turn right
+                rb.rotation -= 5;
+            }
+            
+        }
         // reset speed
         float angleRadians = rb.rotation * Mathf.PI / 180f;
         float xSpeed = Mathf.Cos(angleRadians) * speed;
