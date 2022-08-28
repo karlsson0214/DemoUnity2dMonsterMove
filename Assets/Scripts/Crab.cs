@@ -52,7 +52,7 @@ public class Crab : MonoBehaviour
         // back up - to prevent colliders from overlapping
         transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
 
-        // random left och right
+        // random left or right
         if (Random.Range(0, 2) == 0)
         {
             // turn left
