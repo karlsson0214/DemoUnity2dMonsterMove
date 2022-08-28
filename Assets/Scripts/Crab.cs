@@ -22,7 +22,7 @@ public class Crab : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
 
@@ -51,6 +51,7 @@ public class Crab : MonoBehaviour
     {
         // back up - to prevent colliders from overlapping
         transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
+        
 
         // random left or right
         if (Random.Range(0, 2) == 0)
