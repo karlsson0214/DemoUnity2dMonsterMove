@@ -25,7 +25,21 @@ public class Lobster : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // rotate 30 degrees anticlockwise
-        transform.rotation *= Quaternion.AngleAxis(30, Vector3.forward);
+        // back up
+        transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
+
+        int randomAngle = Random.Range(40, 90);
+        // random left or right
+        if (Random.Range(0, 2) == 0)
+        {
+            // turn left
+            transform.rotation *= Quaternion.AngleAxis(randomAngle, Vector3.forward);
+        }
+        else
+        {
+            // turn right
+            transform.rotation *= Quaternion.AngleAxis(-randomAngle, Vector3.forward);
+        }
+        
     }
 }
