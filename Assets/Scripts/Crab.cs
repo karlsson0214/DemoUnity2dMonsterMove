@@ -24,8 +24,6 @@ public class Crab : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
         // small chance of rotation
         if (Random.Range(0, 100) < 10)
         {
