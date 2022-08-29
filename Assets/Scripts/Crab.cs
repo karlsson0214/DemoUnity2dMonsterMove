@@ -24,7 +24,7 @@ public class Crab : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
 
         // small chance of rotation
         if (Random.Range(0, 100) < 10)
@@ -39,7 +39,7 @@ public class Crab : MonoBehaviour
                 // turn right
                 rb.rotation -= 5;
             }
-            
+
         }
         // reset speed
         float angleRadians = rb.rotation * Mathf.PI / 180f;
@@ -47,10 +47,11 @@ public class Crab : MonoBehaviour
         float ySpeed = Mathf.Sin(angleRadians) * speed;
         rb.velocity = new Vector2(xSpeed, ySpeed);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         // back up - to prevent colliders from overlapping
-        transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
+        //transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
         
 
         // random left or right
