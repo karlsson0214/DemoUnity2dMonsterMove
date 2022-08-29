@@ -50,10 +50,6 @@ public class Crab : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // back up - to prevent colliders from overlapping
-        //transform.position -= transform.right.normalized * speed * Time.deltaTime * 2;
-        
-
         // random left or right
         if (Random.Range(0, 2) == 0)
         {
